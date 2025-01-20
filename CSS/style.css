@@ -18,7 +18,7 @@ table {
 /* Styling delle intestazioni della tabella */
 th {
 
-    background-color: #4CAF50;
+    background-color: purple;
     color: white;
     text-align: left;
     padding: 10px;
@@ -45,6 +45,7 @@ tr:nth-child(even) {
 tr:hover {
 
     background-color: plum;
+    cursor: pointer;
 
 }
 

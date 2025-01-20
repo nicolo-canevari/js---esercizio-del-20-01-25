@@ -111,6 +111,18 @@ const container = document.querySelector(".tabella");
 //  creo una variabile tableHtml e la inizializzo con una stringa vuota
 let tableHTML = '<table>';
 
+// Aggiungo una riga di intestazioni in cima a <table>
+tableHTML += '<tr>';
+tableHTML += '<th>ID</th>';
+tableHTML += '<th>Nome</th>';
+tableHTML += '<th>Cognome</th>';
+tableHTML += '<th>Email</th>';
+tableHTML += '<th>Codice Fiscale</th>';
+tableHTML += '<th>Indirizzo</th>';
+tableHTML += '<th>Anno</th>';
+tableHTML += '<th>Telefono</th>';
+tableHTML += '</tr>';
+
 // Ciclo su ogni persona nell'array
 for (let persona of persone) {
 
@@ -147,7 +159,7 @@ for (let persona of persone) {
 
 tableHTML += '</table>';
 
-// Aggiungi la tabella nel div con id "tabella"
+// Aggiungi la tabella nel div con class "tabella"
 container.innerHTML = tableHTML;
 
 
@@ -157,37 +169,74 @@ container.innerHTML = tableHTML;
 // const container = document.querySelector(".tabella");
 
 // Creo una variabile tableHTML e la inizializzo con una stringa vuota
-// let tableHTML = '<table border="1">';
+// let tableHTML = '<table>';
+
+// Aggiungo una riga di intestazioni in cima a <table>
+// tableHTML += '<tr>';
+// tableHTML += '<th>ID</th>';
+// tableHTML += '<th>Nome</th>';
+// tableHTML += '<th>Cognome</th>';
+// tableHTML += '<th>Email</th>';
+// tableHTML += '<th>Codice Fiscale</th>';
+// tableHTML += '<th>Indirizzo</th>';
+// tableHTML += '<th>Anno</th>';
+// tableHTML += '<th>Telefono</th>';
+// tableHTML += '</tr>';
+
 
 // Ciclo su ogni persona nell'array
 // for (let persona of persone) {
 
-// Iniziamo una riga
+// Destructuring dell'oggetto persona per estrarre le sue proprietà
+//     const {
+
+//         id,
+//         nome,
+//         cognome,
+//         email,
+//         codiceFiscale,
+//         indirizzo,
+//         anno,
+//         telefono
+
+//     } = persona;
+
+// Aggiungo una cella per ciascuna proprietà destrutturata
+//     tableHTML += `<td>${id}</td>`;
+//     tableHTML += `<td>${nome}</td>`;
+//     tableHTML += `<td>${cognome}</td>`;
+//     tableHTML += `<td>${email}</td>`;
+//     tableHTML += `<td>${codiceFiscale}</td>`;
+//     tableHTML += `<td>${indirizzo}</td>`;
+//     tableHTML += `<td>${anno}</td>`;
+//     tableHTML += `<td>${telefono}</td>`;
+
+// Aggiungo una riga alla tabella
 //     tableHTML += '<tr>';
 
-// Itero sulle chiavi dell'oggetto persona usando for...in
+// Itero su ogni proprietà dell'oggetto persona usando for...in
 //     for (let key in persona) {
 
 // Se la chiave è una proprietà dell'oggetto (non eredita da prototipo)
 //         if (persona.hasOwnProperty(key)) {
 
-// Destructuring: estraggo il valore della proprietà
+// Estraggo il valore per la proprietà corrente
 //             const value = persona[key];
 
-//  Stampo la singola colonna
+// Aggiungo una cella per ciascuna proprietà
 //             tableHTML += `<td>${value}</td>`;
 
 //         }
 
 //     }
 
-// Termino la riga
+// Chiudo la riga
 //     tableHTML += '</tr>';
 
 // }
 
-// Termino la tabella
+// Chiudo la tabella
 // tableHTML += '</table>';
 
-// Aggiungi la tabella nel div con id "tabella"
-// container.innerHTML = tableHTML;
+// Aggiungo la tabella nel div con classe "contenitoreTabella"
+// contenitore.innerHTML = tableHTML;
